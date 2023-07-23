@@ -1,0 +1,50 @@
+.header
+    height: 10vh
+    background-color: transparent !important
+    color: white
+    h3
+        cursor: pointer
+        &:hover
+            color: indigo
+    .searchBar
+        width: 30vw !important
+        color: white
+        border: 1px solid indigo
+        &::placeholder
+            color: #ffffff98 !important
+        &:focus
+            outline: none !important
+            border-color: indigo
+            box-shadow: 0 0 0 1px indigo
+    .login
+        &:hover
+            border-bottom: 1px solid white
+            padding: 2vh 0
+            cursor: pointer
+    .cart-icon
+        color: white
+        &:hover
+            color: indigo
+.side-bar
+    background-color: #2b0c34
+    .product
+        height: 20vh
+        .pannel
+            button
+                width: 40% !important
+.searchArea
+    z-index: 1
+    height: 60%
+    width: 31%
+    transform: translateX(-54%) !important
+    margin-right: 50%
+    background: linear-gradient(to right , black , indigo)
+    .result
+        cursor: pointer
+        &:hover
+            background-color: #00000092
+        img
+            width: 18%
+        .info
+            p
+                font-size: 12px
