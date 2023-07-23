@@ -107,7 +107,7 @@ export const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/Tech-Land" element={<Home onlineUser={onlineUser} setOnlineUser={setOnlineUser} cart={cart} setCart={setCart} tabAllProducts={tabAllProducts} online={online} setOnline={setOnline} />} />
+        <Route path="/techno-land" element={<Home onlineUser={onlineUser} setOnlineUser={setOnlineUser} cart={cart} setCart={setCart} tabAllProducts={tabAllProducts} online={online} setOnline={setOnline} />} />
         <Route path="/Category/:category" element={<CategoryPage onlineUser={onlineUser} setOnlineUser={setOnlineUser} online={online} setOnline={setOnline} tabAllProducts={tabAllProducts} cart={cart} setCart={setCart} theProduct={theProduct} setTheProduct={setTheProduct} />} />
         <Route path="/Product/:id" element={<Product onlineUser={onlineUser} setOnlineUser={setOnlineUser} online={online} setOnline={setOnline} tabAllProducts={tabAllProducts} cart={cart} setCart={setCart} theProduct={theProduct} setTheProduct={setTheProduct} />} />
         <Route path="/Authentificating" element={<Authentificating onlineUser={onlineUser} setOnlineUser={setOnlineUser} online={online} setOnline={setOnline} tabAllProducts={tabAllProducts} cart={cart} setCart={setCart} theProduct={theProduct} setTheProduct={setTheProduct} />} />
