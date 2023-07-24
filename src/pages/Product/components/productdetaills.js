@@ -15,6 +15,7 @@ export const ProductComponent = (props) => {
 
     const Addtocart = (element) => {
         if (quantity > 0) {
+
             let price = Math.ceil(element.price * quantity);
             let basketObject = {
                 image: element.imgSrc,
@@ -23,23 +24,25 @@ export const ProductComponent = (props) => {
                 quantity: quantity,
                 fullPrice: price
             }
-
             const existingProductIndex = oldTab.findIndex((item) =>
                 item.name.includes(basketObject.name)
             );
+
 
             if (existingProductIndex !== -1) {
                 // If the product with the same title already exists in the cart, update it
                 let newTab = [...oldTab];
                 newTab.splice(existingProductIndex, 1, basketObject);
                 props.setCart(newTab);
-                console.table(newTab);
+                setQuantity(0)
+                
+
 
             } else {
                 // If the product does not exist in the cart, add it
                 let newTab = [...oldTab, basketObject];
                 props.setCart(newTab);
-                console.table(newTab);
+                setQuantity(0)
             }
         }
     };
@@ -69,7 +72,7 @@ export const ProductComponent = (props) => {
                                             setQuantity(quantity + 1)
                                         }} className="btn text-white fs-3"> +</button>
                                     </div>
-                                    <button onClick={() => { Addtocart(element) }} className="btn bg-indigo text-white w-75 rounded-pill">Add To Cart</button>
+                                    <button onClick={() => { Addtocart(element) }} className="btn btn-indigo text-white w-75 rounded-pill">Add To Cart</button>
                                 </div>
 
                             </>

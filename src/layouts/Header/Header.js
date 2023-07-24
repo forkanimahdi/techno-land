@@ -54,7 +54,7 @@ export const HeaderComponent = (props) => {
         if (props.online === false) {
             NavTo("/techno-land/Authentificating")
         } else {
-            window.location.href = "https://forkanimahdi.github.io/details-of-payment/"
+            window.open("https://forkanimahdi.github.io/details-of-payment/", "_blank");
         }
     }
 
