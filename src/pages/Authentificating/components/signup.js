@@ -68,7 +68,7 @@ export const AuthentificatingComponent = (props) => {
 
 
         } else {
-            setError("No input can be empty")
+            setError("Invalid")
             setTimeout(() => {
                 setError("")
             }, 3000);
@@ -138,10 +138,10 @@ export const AuthentificatingComponent = (props) => {
                     <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={singupEmail} placeholder="Email" type="email" onChange={(event) => {
                         setSingupEmail(event.target.value)
                     }} />
-                    <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={singupPassword} placeholder="Password" type="password" onChange={(event) => {
+                    <input  className={signupConfirm === singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-success' : signupConfirm !== singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-danger' : "rounded-pill bg-transparent border border-indigo text-center text-white"} value={singupPassword} placeholder="Password" type="password" onChange={(event) => {
                         setSingupPassword(event.target.value)
                     }} />
-                    <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={signupConfirm} placeholder="Confirm password" type="password" onChange={(event) => {
+                    <input className={signupConfirm === singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-success' : signupConfirm !== singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-danger' : "rounded-pill bg-transparent border border-indigo text-center text-white"} value={signupConfirm} placeholder="Confirm password" type="password" onChange={(event) => {
                         setConfirmPassword(event.target.value)
                     }} />
                     <button className="btn btn-indigo w-50 rounded-pill text-white" onClick={Registring}>Signup</button>
