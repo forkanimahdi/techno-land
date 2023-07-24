@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const AuthentificatingComponent = (props) => {
 
-    let [switcher, setSwitcher] = useState(true)
+    let [switcher, setSwitcher] = useState(false)
 
     let [singupUsername, setSingupUsername] = useState('')
     let [singupEmail, setSingupEmail] = useState('')
