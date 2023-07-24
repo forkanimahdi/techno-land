@@ -74,7 +74,7 @@ export const HeaderComponent = (props) => {
 
         <>
             <div className=" bg-white header d-flex align-items-center justify-content-around">
-                <h3 onClick={() => { NavTo("/techno-land/") }} className="pointer-event">Tech Land</h3>
+                <h3 onClick={() => { NavTo("/techno-land/") }} className="pointer-event">Techno Land</h3>
                 <NavDropdown className="" title="CATALOGUE" id="navbarScrollingDropdown">
                     <NavDropdown.Item onClick={() => navigateto("")} className="text-indigo " >
                         Home
