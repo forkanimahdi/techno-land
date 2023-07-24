@@ -44,13 +44,13 @@ export const FlashSalesComponent = () => {
 
     return (
         <>
-            <div className="w-100 h-100 d-flex align-items-center justify-content-evenly">
-                <div className="h-75 w-25 position-relative d-flex flex-column align-items-start justify-content-evenly">
+            <div className="w-100 h-100 flex-column flex-lg-row d-flex align-items-center justify-content-evenly">
+                <div className="h-75 w-25 position-relative flash-detaills d-flex flex-column align-items-lg-start align-items-center justify-content-evenly">
                     <h3 className="text-white ">Special Offer!</h3>
                     <h3 className="text-indigo counter">
                         <span className="text-white fs-5">Limited Offer:</span> {formattedTime}
                     </h3>
-                    <p className="text-white">Buy the first Element and get the Accessory related to it for free</p>
+                    <p className="text-white text-lg-start text-center">Buy the first Element and get the Accessory related to it for free limited offre . Hurry UP</p>
                     <button className="btn bg-indigo border border-1 border-white rounded-pill w-50 text-white">Order Now</button>
                 </div>
                 <div className="images d-flex align-items-center justify-content-around w-25">

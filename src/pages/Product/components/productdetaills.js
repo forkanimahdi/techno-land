@@ -51,19 +51,19 @@ export const ProductComponent = (props) => {
 
     return (
         <>
-            <div className="productdetaillDiv border border-1 border-white d-flex">
+            <div className="productdetaillDiv border border-1 border-white d-flex flex-lg-row flex-column">
                 {
                     props.tabAllProducts.map((element) =>
                         element.name === id ?
                             <>
-                                <div className="imgDiv w-50 h-100 d-flex align-items-center justify-content-center">
+                                <div className="imgDiv w-50 h-100 d-flex  align-items-center justify-content-center">
                                     <img className="w-75" src={element.imgSrc} alt="" />
                                 </div>
                                 <div className="product-info w-50 d-flex flex-column align-items-start justify-content-evenly">
-                                    <h2 className="text-white">{element.name}</h2>
+                                    <h2 className="text-white m-lg-0 ms-3">{element.name}</h2>
                                     <p className="container text-gray">{element.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum, assumenda neque dolorum illo a Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eos voluptatem eligendi nostrum. Animi, neque..</p>
-                                    <h3 className="text-indigo">{element.price} $</h3>
-                                    <div className="d-flex w-50 border text-white align-items-center justify-content-between ">
+                                    <h3 className="text-indigo  m-lg-0 ms-2">{element.price} $</h3>
+                                    <div className="pannel-quantity  d-flex w-50 border text-white align-items-center justify-content-between ">
                                         <button onClick={() => {
                                             quantity > 0 ? setQuantity(quantity - 1) : setQuantity(quantity)
                                         }} className="btn text-white fs-3"> -</button>
@@ -72,7 +72,7 @@ export const ProductComponent = (props) => {
                                             setQuantity(quantity + 1)
                                         }} className="btn text-white fs-3"> +</button>
                                     </div>
-                                    <button onClick={() => { Addtocart(element) }} className="btn btn-indigo text-white w-75 rounded-pill">Add To Cart</button>
+                                    <button onClick={() => { Addtocart(element) }} className="call-to-action btn btn-indigo text-white w-75 rounded-pill">Add To Cart</button>
                                 </div>
 
                             </>

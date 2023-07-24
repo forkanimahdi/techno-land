@@ -48,3 +48,59 @@
         .info
             p
                 font-size: 12px
+@media (max-width : 428px)
+    .header
+        height: 6.5rem
+        padding: 2vw
+        background-color: transparent !important
+        color: white
+        h3
+            width: 100%
+            text-align: center
+            cursor: pointer
+            &:hover
+                color: indigo
+        .catalogue
+            display: none
+        .searchBar
+            width: 50vw !important
+            color: white
+            border: 1px solid white
+            // display: none
+            &::placeholder
+                color: #ffffff98 !important
+            &:focus
+                outline: none !important
+                border-color: indigo
+                box-shadow: 0 0 0 1px indigo
+        button
+            display: none
+        .cart-icon
+            color: white
+            &:hover
+                color: indigo
+    .side-bar
+        background-color: #2b0c34
+        .product
+            height: 10rem
+            .pannel
+                button
+                    width: 40% !important
+    .searchArea
+        z-index: 10
+        height: 30rem
+        width: 90%
+        transform: translateX(-0%) !important
+        margin-right: 0%
+        top: 12% !important
+        left: 5%!important
+        background: linear-gradient(to right , black , indigo)
+        .result
+            cursor: pointer
+            &:hover
+                background-color: #00000092
+            img
+                width: 18%
+            .info
+                p
+                    font-size: 12px

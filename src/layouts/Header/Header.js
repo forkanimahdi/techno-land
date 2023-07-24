@@ -73,9 +73,9 @@ export const HeaderComponent = (props) => {
     return (
 
         <>
-            <div className=" bg-white header d-flex align-items-center justify-content-around">
+            <div className=" bg-white header flex-wrap d-flex align-items-center justify-content-around">
                 <h3 onClick={() => { NavTo("/techno-land/") }} className="pointer-event">Techno Land</h3>
-                <NavDropdown className="" title="CATALOGUE" id="navbarScrollingDropdown">
+                <NavDropdown className="catalogue" title="CATALOGUE" id="navbarScrollingDropdown">
                     <NavDropdown.Item onClick={() => navigateto("")} className="text-indigo " >
                         Home
                     </NavDropdown.Item>
@@ -99,12 +99,12 @@ export const HeaderComponent = (props) => {
                     <input
                         type="search"
                         placeholder="Search ..."
-                        className="me-2 searchBar bg-transparent text-center"
+                        className="me-2 searchBar bg-transparent text-center rounded-pill"
                         aria-label="Search"
                         value={searching}
                         onChange={Search}
                     />
-                    <Button variant="outline-indigo">Search</Button>
+                    <Button className="searchBtn" variant="outline-indigo">Search</Button>
                 </Form>
                 <div className={typing === true ? "searchArea border border-2 p-1  position-absolute start-50 overflow-auto top-10 bg-indiggo rounded-3" : "d-none"}>
                     {
@@ -169,16 +169,15 @@ export const HeaderComponent = (props) => {
                             <Navbar.Toggle className="d-flex position-relative h-100">
                                 {/* Cart icon */}
                                 <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
-                                <p className={tabCarts.length > 0 ? "bg-white position-absolute w-50 border border-indigo d-flex align-items-center justify-content-center text-indigo fs-6 h-75 rounded-circle ms-2 top-0 fw-bolder" : "d-none"}>{tabCarts.length}</p>
+                                <p className={tabCarts.length > 0 ? "bg-white position-absolute w-50 border border-indigo d-flex align-items-center justify-content-center text-indigo fs-6 h-75 rounded-circle ms-lg-2 top-0 fw-bolder ms-6" : "d-none"}>{tabCarts.length}</p>
                             </Navbar.Toggle>
                             <Navbar.Offcanvas
                                 className="side-bar "
                                 id={`offcanvasNavbar-expand-${expand}`}
                                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                                 placement="end"
-
-                            >
-                                <Offcanvas.Header closeButton>
+                                >
+                                <Offcanvas.Header  closeButton closeVariant="white">
                                     <Offcanvas.Title className="text-white" id={`offcanvasNavbarLabel-expand-${expand}`}>
                                         Cart
                                     </Offcanvas.Title>

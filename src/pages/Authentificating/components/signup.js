@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export const AuthentificatingComponent = (props) => {
 
-    let [switcher, setSwitcher] = useState(false)
+    let [switcher, setSwitcher] = useState(true)
 
     let [singupUsername, setSingupUsername] = useState('')
     let [singupEmail, setSingupEmail] = useState('')
@@ -32,7 +32,7 @@ export const AuthentificatingComponent = (props) => {
     useEffect(() => {
         let testUser = new Users('admin', 'admin', 'admin')
         users.push(testUser)
-    }, )
+    },)
 
 
     const Registring = () => {
@@ -114,9 +114,10 @@ export const AuthentificatingComponent = (props) => {
         <>
             <div className="AuthentificatingDiv flex-row-reverse border d-flex position-relative ">
                 <div className={switcher === false ? "switcher-signup w-50 h-100 position-absolute end-0" : "switcher-login w-50 h-100 position-absolute end-0"}></div>
-                <div className="login w-50 h-100 d-flex flex-column align-items-center justify-content-around">
-                    <h4 className="text-white">Login {error}</h4>
-                    {/* <div className="loginform h-50 bg-danger d-flex flex-column align-items-center justify-content-around w-100"> */}
+                <div className="w-50 h-100">
+                    <div className={switcher === true ? "login  h-100 d-flex flex-column align-items-center justify-content-around" : "d-lg-none d-none"}>
+                        <h4 className="text-white">Login {error}</h4>
+                        {/* <div className="loginform h-50 bg-danger d-flex flex-column align-items-center justify-content-around w-100"> */}
                         <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={loginEmail} placeholder="Email adress" type="email" onChange={(event) => {
                             setLoginEmail(event.target.value)
                         }} />
@@ -124,28 +125,29 @@ export const AuthentificatingComponent = (props) => {
                             setLoginPassword(event.target.value)
                         }} />
 
-                    {/* </div> */}
-                    <button onClick={logingin} className="btn btn-indigo w-50 text-white rounded-pill">Login</button>
-                    <p className="text-gray">You dont have an account ? <span onClick={() => {setSwitcher(false)}} className="text-indigo">Signup</span></p>
+                        {/* </div> */}
+                        <button onClick={logingin} className="btn btn-indigo w-50 text-white rounded-pill">Login</button>
+                        <p className="text-gray">You dont have an account ? <span onClick={() => { setSwitcher(false) }} className="text-indigo">Signup</span></p>
+                    </div>
                 </div>
-
-
-                <div className="signup w-50 h-100 d-flex flex-column align-items-center justify-content-around ">
-                    <h4 className="text-white">Signup {error}</h4>
-                    <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={singupUsername} placeholder="Username" type="text" onChange={(event) => {
-                        setSingupUsername(event.target.value)
-                    }} />
-                    <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={singupEmail} placeholder="Email" type="email" onChange={(event) => {
-                        setSingupEmail(event.target.value)
-                    }} />
-                    <input  className={signupConfirm === singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-success' : signupConfirm !== singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-danger' : "rounded-pill bg-transparent border border-indigo text-center text-white"} value={singupPassword} placeholder="Password" type="password" onChange={(event) => {
-                        setSingupPassword(event.target.value)
-                    }} />
-                    <input className={signupConfirm === singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-success' : signupConfirm !== singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-danger' : "rounded-pill bg-transparent border border-indigo text-center text-white"} value={signupConfirm} placeholder="Confirm password" type="password" onChange={(event) => {
-                        setConfirmPassword(event.target.value)
-                    }} />
-                    <button className="btn btn-indigo w-50 rounded-pill text-white" onClick={Registring}>Signup</button>
-                    <p className="text-gray">Already have an account ?<span onClick={() => {setSwitcher(true)}} className="text-indigo ms-1">Login</span></p>
+                <div className="w-50 h-100">
+                    <div className={switcher === false ? "signup  h-100 d-flex flex-column align-items-center justify-content-around " : "d-lg-none  d-none"}>
+                        <h4 className="text-white">Signup {error}</h4>
+                        <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={singupUsername} placeholder="Username" type="text" onChange={(event) => {
+                            setSingupUsername(event.target.value)
+                        }} />
+                        <input className="rounded-pill bg-transparent border border-indigo text-center text-white" value={singupEmail} placeholder="Email" type="email" onChange={(event) => {
+                            setSingupEmail(event.target.value)
+                        }} />
+                        <input className={signupConfirm === singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-success' : signupConfirm !== singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-danger' : "rounded-pill bg-transparent border border-indigo text-center text-white"} value={singupPassword} placeholder="Password" type="password" onChange={(event) => {
+                            setSingupPassword(event.target.value)
+                        }} />
+                        <input className={signupConfirm === singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-success' : signupConfirm !== singupPassword && signupConfirm !== "" ? 'rounded-pill bg-transparent text-center text-white border border-3 border-danger' : "rounded-pill bg-transparent border border-indigo text-center text-white"} value={signupConfirm} placeholder="Confirm password" type="password" onChange={(event) => {
+                            setConfirmPassword(event.target.value)
+                        }} />
+                        <button className="btn btn-indigo w-50 rounded-pill text-white" onClick={Registring}>Signup</button>
+                        <p className="text-gray">Already have an account ?<span onClick={() => { setSwitcher(true) }} className="text-indigo ms-1">Login</span></p>
+                    </div>
                 </div>
             </div>
 

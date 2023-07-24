@@ -17,7 +17,7 @@ export const Home = (props) => {
         <div className="carouselDiv d-flex align-items-center justify-content-center">
           <CarouselComponent />
         </div>
-        <div className="flash-sales">
+        <div className="flash-sales p-lg-0 p-3">
           <FlashSalesComponent />
         </div>
         <div className="product-category p-3 d-flex align-items-center justify-content-around flex-wrap">

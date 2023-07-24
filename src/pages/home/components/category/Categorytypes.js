@@ -35,7 +35,7 @@ export const CategoryComponent = () => {
             {
                 tabCategorys.map((element, index) =>
                     <>
-                        <Card className="cards-body bg-transparent border border-1 border-indigo p-1 mt-" style={{ width: '20rem', height: '62vh' }}>
+                        <Card className="cards-body bg-transparent border border-1 border-indigo mt-2" style={{ width: '21rem', height: '62vh' }}>
                             <Card.Img variant="top h-50" src={element.imgCat} />
                             <Card.Body className="">
                                 <Card.Title className="text-center text-white">{element.tittleCat}</Card.Title>
