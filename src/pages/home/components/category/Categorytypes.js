@@ -28,7 +28,7 @@ export const CategoryComponent = () => {
 
     let Destination = useNavigate()
     const navigateTo = (element) => {
-        Destination(`/Category/${element.type}`)
+        Destination(`/techno-land/Category/${element.type}`)
     }
     return (
         <>
