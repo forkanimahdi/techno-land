@@ -18,7 +18,7 @@ export const CategoryComponent = (props) => {
 
 
     const SendtoProductInfo = (element) => {
-        Destination(`/Product/${element.name}`)
+        Destination(`/techno-land/Product/${element.name}`)
 
 
     }

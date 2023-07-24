@@ -20,12 +20,12 @@ export const HeaderComponent = (props) => {
 
     const navigateto = (param) => {
         if (param === "") {
-            NavTo(`/`)
+            NavTo(`/techno-land`)
         }
         else if (param === "Authentificating") {
-            NavTo(`/Authentificating`)
+            NavTo(`/techno-land/Authentificating`)
         } else {
-            NavTo(`/Category/${param}`)
+            NavTo(`/techno-land/Category/${param}`)
         }
     }
     const Minusitem = (element, index) => {
@@ -52,7 +52,7 @@ export const HeaderComponent = (props) => {
 
     const Checking = () => {
         if (props.online === false) {
-            NavTo("/Authentificating")
+            NavTo("/techno-land/Authentificating")
         } else {
             window.location.href = "https://forkanimahdi.github.io/details-of-payment/"
         }
@@ -74,7 +74,7 @@ export const HeaderComponent = (props) => {
 
         <>
             <div className=" bg-white header d-flex align-items-center justify-content-around">
-                <h3 onClick={() => { NavTo("/") }} className="pointer-event">Tech Land</h3>
+                <h3 onClick={() => { NavTo("/techno-land/") }} className="pointer-event">Tech Land</h3>
                 <NavDropdown className="" title="CATALOGUE" id="navbarScrollingDropdown">
                     <NavDropdown.Item onClick={() => navigateto("")} className="text-indigo " >
                         Home
@@ -110,7 +110,7 @@ export const HeaderComponent = (props) => {
                     {
                         results.map((element) =>
                             <div onClick={() => {
-                                NavTo(`/Product/${element.name}`);
+                                NavTo(`/techno-land/Product/${element.name}`);
                                 setSearching("");
                                 setTyping(false)
 

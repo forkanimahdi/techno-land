@@ -90,7 +90,7 @@ export const AuthentificatingComponent = (props) => {
                     props.setOnline(true)
                     setLoginEmail("")
                     setLoginPassword("")
-                    navigate('/')
+                    navigate('/techno-land')
                 } else {
                     setError("Password Incorrect ")
                     setTimeout(() => {
