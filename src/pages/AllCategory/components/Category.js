@@ -34,7 +34,7 @@ export const CategoryComponent = (props) => {
                         element.type === category ?
 
                             <>
-                                <Card className="cards-body bg-transparent border border-1 border-indigo p-1 mt-2" style={{ width: '20rem', height: '30rem' }}>
+                                <Card className="cards-body bg-transparent border border-1 border-indigo p-1 mt-2" style={{ width: '20rem', height: '32rem' }}>
                                     <Card.Img variant="top h-50" src={element.imgSrc} />
                                     <Card.Body className="h-25" style={{ height: '20%' }}>
                                         <Card.Title className="text-center text-white">{element.name}</Card.Title>
