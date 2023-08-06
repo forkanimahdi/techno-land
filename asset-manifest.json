@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/techno-land/static/css/main.3134f303.css",
+    "main.js": "/techno-land/static/js/main.c79f9533.js",
+    "static/media/csq.png": "/techno-land/static/media/csq.4c5b372fa15a47cf5549.png",
+    "static/media/iphone .gif": "/techno-land/static/media/iphone .548f6e1a43d9983ca337.gif",
+    "static/media/muse-argb.gif": "/techno-land/static/media/muse-argb.32ce39b9b96c636169a4.gif",
+    "static/media/keyboard.gif": "/techno-land/static/media/keyboard.4c473dc08cc9df6c8387.gif",
+    "static/media/fa-solid-900.ttf": "/techno-land/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/Dell XPS 13.jpg": "/techno-land/static/media/Dell XPS 13.e2c37dc10d602b28f8d7.jpg",
+    "static/media/Dell.png": "/techno-land/static/media/Dell.3489d3718f7c568928bd.png",
+    "static/media/fa-brands-400.ttf": "/techno-land/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/macbook.png": "/techno-land/static/media/macbook.25092772fdd7c69f022e.png",
+    "static/media/Laptop.png": "/techno-land/static/media/Laptop.b5fe3a5469bb6f2ab72d.png",
+    "static/media/SW.png": "/techno-land/static/media/SW.0b9809090303633171e6.png",
+    "static/media/fa-solid-900.woff2": "/techno-land/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/smartphones.png": "/techno-land/static/media/smartphones.2769fbb3122cc8493f8b.png",
+    "static/media/HP-removebg-preview.png": "/techno-land/static/media/HP-removebg-preview.f0cea51ab17f5eb3f370.png",
+    "static/media/fa-brands-400.woff2": "/techno-land/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/techno-land/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/Accer.png": "/techno-land/static/media/Accer.1293cb2eb99b2cedef22.png",
+    "static/media/fa-regular-400.woff2": "/techno-land/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/techno-land/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/techno-land/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/techno-land/index.html",
+    "main.3134f303.css.map": "/techno-land/static/css/main.3134f303.css.map",
+    "main.c79f9533.js.map": "/techno-land/static/js/main.c79f9533.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3134f303.css",
+    "static/js/main.c79f9533.js"
+  ]
+}
